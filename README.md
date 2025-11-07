@@ -4,7 +4,7 @@
 </div>
 
 <p align="left">
-  I'm an enthusiastic and fast-learning developer from Belarus, currently based in Poland. I'm passionate about building complex solutions that bridge the gap between physical hardware and scalable backend software.
+  I'm an enthusiastic and fast-learning developer. I'm passionate about building complex solutions that bridge the gap between physical hardware and scalable backend software.
 </p>
 <p align="left">
   My focus is on low-level firmware development (C/C++), real-time systems, and building the high-performance Python APIs and infrastructure needed to support them. In my free time, I run my own <b>Homelab</b>, managing servers, containerized services, and networks.
