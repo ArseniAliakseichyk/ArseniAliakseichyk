@@ -143,7 +143,7 @@ Three standalone IoT projects on ESP32 using ESP-IDF and FreeRTOS.
 </details>
 
 <details>
-<summary><strong>📱 ChillMove — Fitness Platform</strong>&ensp;<code>Kotlin</code> <code>Swift</code> <code>Flutter</code> <code>Docker</code> <code>Firebase</code>&ensp;📦 Production</summary>
+<summary><strong>📱 Confidential B2B Project — Fitness Platform</strong>&ensp;<code>Kotlin</code> <code>Swift</code> <code>Flutter</code> <code>Docker</code> <code>Firebase</code>&ensp;📦 Production</summary>
 <br>
 
 Cross-platform fitness app with system-level native monitoring. Freelance project (Oct 2025 – Feb 2026).
