@@ -1,5 +1,6 @@
 <div align="center">
   <h1>Arseni Aliakseichyk</h1>
+  <p><strong><a href="https://cv.arseni-aliakseichyk.com">cv.arseni-aliakseichyk.com</a></strong></p>
   <h3>Embedded & Systems Engineer</h3>
   <p>
     C firmware · STM32 · ESP32-S3 · FreeRTOS · IoT · Edge ML · Linux Infrastructure
