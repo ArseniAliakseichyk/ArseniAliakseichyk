@@ -14,7 +14,7 @@
 
 ---
 
-Currently building **CyberGlove** - an IoT smart glove with 9-DoF IMU, fiber optic sensors, and real-time WebSocket telemetry. Interned at **GlobalLogic Poland** building a robotic platform on Raspberry Pi 5. Self-hosting **13+ Docker services** on Linux VPS across 4 domains.
+Currently building **CyberGlove** - an IoT smart glove with 9-DoF IMU, fiber optic sensors, and real-time WebSocket telemetry. Interned at **GlobalLogic Poland** building a robotic platform on Raspberry Pi 5. Self-hosting **13+ Docker services** on a Linux VPS across 4 domains, joined to a home **OpenWrt edge router** over a WireGuard site-to-site tunnel.
 
 ---
 
@@ -40,12 +40,6 @@ Currently building **CyberGlove** - an IoT smart glove with 9-DoF IMU, fiber opt
   <img src="https://img.shields.io/badge/PyTorch-EE4C2C?style=for-the-badge&logo=pytorch&logoColor=white" alt="PyTorch"/>
   <img src="https://img.shields.io/badge/ONNX-005CED?style=for-the-badge&logo=onnx&logoColor=white" alt="ONNX"/>
   <img src="https://img.shields.io/badge/OpenCV-5C3EE8?style=for-the-badge&logo=opencv&logoColor=white" alt="OpenCV"/>
-</p>
-<p>
-  <strong>Mobile (System-Level)</strong><br>
-  <img src="https://img.shields.io/badge/Kotlin-7F52FF?style=for-the-badge&logo=kotlin&logoColor=white" alt="Kotlin"/>
-  <img src="https://img.shields.io/badge/Swift-F05138?style=for-the-badge&logo=swift&logoColor=white" alt="Swift"/>
-  <img src="https://img.shields.io/badge/Flutter-02569B?style=for-the-badge&logo=flutter&logoColor=white" alt="Flutter"/>
 </p>
 <p>
   <strong>Infrastructure & DevOps</strong><br>
@@ -88,22 +82,23 @@ IoT wearable for gesture control built on ESP32-S3. Reads ICM-20948 9-DoF IMU ov
 <summary><strong>🤖 Robotic Platform — GlobalLogic Internship</strong>&ensp;<code>C++17</code> <code>RPi 5</code> <code>GStreamer</code> <code>MQTT</code> <code>Hailo AI</code>&ensp;✅ Complete</summary>
 <br>
 
-Modular robotic platform on Raspberry Pi 5, developed in a 4-person Agile/SCRUM team at GlobalLogic Poland. Features multithreaded C++17 motion control, real-time FPV video streaming, ultrasonic obstacle detection, and AI-powered human tracking.
+Modular robotic platform on Raspberry Pi 5, developed in a 4-person Agile/SCRUM team at GlobalLogic Poland. I built the core embedded software and the deployment infrastructure, then supported the team on the rest.
 
 **Highlights:**
-- C++17 multithreaded motion control — 5 concurrent threads (motor PWM, sensor polling, MQTT listener, video pipeline, API server)
+- C++17 multithreaded motion control — 5 concurrent threads (motor PWM, sensor polling, MQTT listener, video pipeline, REST API server)
 - GStreamer FPV streaming — MJPEG over UDP, runtime-configurable up to 1080p@60fps
 - HC-SR04 ultrasonic obstacle detection — 20 cm threshold, hysteresis for noise rejection
-- FastAPI REST API — JWT auth, containerized with Docker Compose (FastAPI + Mosquitto + Redis)
-- Hailo AI neural processor — real-time human skeleton detection for autonomous obstacle avoidance
+- Deployment infra — Docker Compose (Mosquitto MQTT + Redis) on a self-managed Linux server, Bash automation
+- Hailo AI neural processor — real-time human skeleton detection and obstacle avoidance (team-supported)
+- Personal continuation (full C11 rewrite): **[robot-web-controller](https://github.com/ArseniAliakseichyk/robot-web-controller)**
 
 </details>
 
 <details>
-<summary><strong>⚙️ STM32 Peripheral Firmware</strong>&ensp;<code>C</code> <code>STM32F4</code> <code>HAL/CMSIS</code> <code>SPI</code> <code>I²C</code> <code>UART</code>&ensp;✅ Complete</summary>
+<summary><strong>⚙️ STM32 Peripheral Firmware</strong>&ensp;<code>C</code> <code>STM32F4</code> <code>LL drivers</code> <code>CMSIS</code> <code>SPI</code> <code>I²C</code> <code>UART</code>&ensp;✅ Complete</summary>
 <br>
 
-Bare-metal and HAL firmware on STM32F407VGT6 (ARM Cortex-M4, Discovery board). Both register-level and HAL-abstracted implementations for peripheral communication and signal processing.
+Register-level firmware on STM32F411 (main board) and STM32F407VGT6 Discovery (ARM Cortex-M4) using ST Low-Level (LL) drivers + CMSIS — no HAL in the runtime path. STM32CubeMX only for initial clock-tree configuration.
 
 **Highlights:**
 - GPIO configuration, timer-based PWM generation
@@ -111,6 +106,8 @@ Bare-metal and HAL firmware on STM32F407VGT6 (ARM Cortex-M4, Discovery board). B
 - SPI, I²C, UART peripheral communication
 - ADC/DAC analog signal processing
 - Debugging with LA1010 logic analyzer and oscilloscope via JTAG/GDB
+
+🔗 **Repo:** [STM32F4-Peripheral](https://github.com/ArseniAliakseichyk/STM32F4-Peripheral)
 
 </details>
 
@@ -125,7 +122,9 @@ Full ML pipeline from training to edge deployment. Classifies 80 classes (5 shap
 - ONNX export & edge inference — 25–30 FPS at 640×480 on RPi 5
 - Custom SPI LCD driver — ST7735S TFT (160×128, RGB565) via spidev + gpiod v2
 - HTTP dashboard — real-time classification stats, detection history
-- Synthetic dataset generation — 2M images, 12 augmentation types
+- Synthetic dataset generation — ~16K images, 12 augmentation types
+
+🔗 **Repo:** [RaspberryPiShapeRecognitionRT](https://github.com/ArseniAliakseichyk/RaspberryPiShapeRecognitionRT)
 
 </details>
 
@@ -144,26 +143,27 @@ Three standalone IoT projects on ESP32 using ESP-IDF and FreeRTOS.
 </details>
 
 <details>
-<summary><strong>📱 Confidential B2B Project — Fitness Platform</strong>&ensp;<code>Kotlin</code> <code>Swift</code> <code>Flutter</code> <code>Docker</code> <code>Firebase</code>&ensp;📦 Production</summary>
+<summary><strong>🔒 Confidential B2B — Self-Hosted Backend + System-Level Android</strong>&ensp;<code>Python</code> <code>Docker</code> <code>GitLab CI/CD</code> <code>Kotlin</code> <code>Firebase (FCM)</code>&ensp;📦 Production</summary>
 <br>
 
-Cross-platform fitness app with system-level native monitoring. Freelance project (Oct 2025 – Feb 2026).
+Confidential B2B freelance project (Oct 2025 – Feb 2026) where I owned the self-hosted backend and the system-level Android integration.
 
 **Highlights:**
-- **Android** — Kill-resistant monitoring in native Kotlin: Device Owner API with Foreground Service (OOM adj 200), native Firestore sync without Flutter runtime, 9-layer protection architecture. Tested on Xiaomi MIUI, Samsung One UI
-- **iOS** — Native Screen Time monitoring using Swift (Family Controls / DeviceActivityMonitor framework)
-- **Backend** — Self-hosted notification worker (Node.js 18, Docker) processing 10 event types with exponential retry logic
-- **App** — Flutter (BLoC, 17 cubits), Firebase Auth, Firestore, GoRouter, bilingual (EN/UK)
+- **Backend** — Self-hosted Linux notification worker (Python, Docker) on a private VPS: 10 event types, locale-aware delivery, exponential retry (5 attempts), Firebase Cloud Messaging (FCM) token management
+- **CI/CD** — Full GitLab pipeline: analyze → test → build → release, enforced static analysis, automated artifact publishing
+- **Android** — Native monitoring module in Kotlin: Device Owner API + Foreground Service (OOM adj 200)
 
 </details>
 
 <details>
-<summary><strong>🖥️ Production VPS Infrastructure</strong>&ensp;<code>Docker</code> <code>Nginx</code> <code>WireGuard</code> <code>Linux</code>&ensp;📦 Production (2+ years)</summary>
+<summary><strong>🖥️ Homelab Infrastructure — Edge Router + VPS</strong>&ensp;<code>OpenWrt</code> <code>WireGuard</code> <code>Docker</code> <code>Nginx</code> <code>Authelia</code>&ensp;📦 Production (2+ years)</summary>
 <br>
 
-Ubuntu VPS hosting 13+ containerized services across 4 domains with 2+ years of continuous uptime.
+Self-hosted network end to end: an OpenWrt edge router and a public VPS joined into one private network over a WireGuard site-to-site tunnel. 13+ containerized services across 4 domains, 2+ years of continuous uptime. Sanitized config + CI on GitHub.
 
-**Stack:** Docker Compose, Nginx reverse proxy, WireGuard VPN, Certbot (SSL/TLS auto-renewal), UFW firewall, automated backups.
+**Stack:** OpenWrt, WireGuard site-to-site, AdGuard Home (network-wide DNS), nftables default-deny segmentation, Nginx + Certbot (SSL/TLS auto-renewal), Authelia SSO + YubiKey 2FA, Docker Compose, UFW.
+
+🔗 **Repo:** [homelab-infrastructure](https://github.com/ArseniAliakseichyk/homelab-infrastructure)
 
 </details>
 
