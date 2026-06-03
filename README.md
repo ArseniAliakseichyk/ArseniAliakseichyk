@@ -1,7 +1,7 @@
 <div align="center">
   <h1>Arseni Aliakseichyk</h1>
   <p><strong><a href="https://cv.arseni-aliakseichyk.com">cv.arseni-aliakseichyk.com</a></strong></p>
-  <h3>Embedded & Systems Engineer</h3>
+  <h3>Embedded and Infrastructure Engineer</h3>
   <p>
     C firmware · STM32 · ESP32-S3 · FreeRTOS · IoT · Edge ML · Linux Infrastructure
   </p>
@@ -14,7 +14,7 @@
 
 ---
 
-Currently building **CyberGlove** — an IoT smart glove with 9-DoF IMU, fiber optic sensors, and real-time WebSocket telemetry. Interned at **GlobalLogic Poland** building a robotic platform on Raspberry Pi 5. Self-hosting **13+ Docker services** on Linux VPS across 4 domains.
+Currently building **CyberGlove** - an IoT smart glove with 9-DoF IMU, fiber optic sensors, and real-time WebSocket telemetry. Interned at **GlobalLogic Poland** building a robotic platform on Raspberry Pi 5. Self-hosting **13+ Docker services** on Linux VPS across 4 domains.
 
 ---
 
