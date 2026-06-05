@@ -132,13 +132,13 @@ Full ML pipeline from training to edge deployment. Classifies 80 classes (5 shap
 <summary><strong>📡 ESP32 IoT Embedded Suite</strong>&ensp;<code>C</code> <code>ESP-IDF</code> <code>FreeRTOS</code> <code>BLE</code> <code>NimBLE</code>&ensp;✅ Complete</summary>
 <br>
 
-Three standalone IoT projects on ESP32 using ESP-IDF and FreeRTOS.
+Three standalone IoT projects on ESP32-C3 using ESP-IDF and FreeRTOS.
 
 | Project | Description | Key Tech |
 |---------|-------------|----------|
-| **BLE Gamepad Monitor** | Dual analog joysticks → BLE GATT service + SPI LCD display + Python desktop visualizer | NimBLE, SPI, ADC, Bleak |
-| **Firebase LCD** | Wi-Fi → Firebase REST API → message display on SPI LCD | HTTPS, cJSON, SNTP |
-| **NTP Deep Sleep Clock** | Time sync via SNTP, display on LCD, deep sleep power management | Deep Sleep, RTC, SPI |
+| **[BLE Gamepad Monitor](https://github.com/ArseniAliakseichyk/esp32c3-ble-joystick-monitor)** | Dual analog joysticks → BLE GATT service + SPI LCD display + Python desktop visualizer | NimBLE, SPI, ADC, Bleak |
+| **[Firebase LCD](https://github.com/ArseniAliakseichyk/esp32c3-firebase-lcd-display)** | Wi-Fi → Firebase REST API → message display on SPI LCD | HTTPS, TLS, SNTP |
+| **[NTP Deep Sleep Clock](https://github.com/ArseniAliakseichyk/esp32c3-ntp-clock)** | Time sync via SNTP, display on LCD, deep sleep power management | Deep Sleep, RTC, SPI |
 
 </details>
 
